@@ -1,0 +1,165 @@
+:root{
+    --Moderate-violet: #7541c8;
+    --Very-dark-grayish-blue: #48556a;
+    --Very-dark-blackish-blue: #19212e;
+    --White: #ffffff;
+    
+    --Light-gray: #cfcfcf;
+    --Light-grayish-blue: #b5d6b5;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    min-height: 100vh;
+    margin: 0 10%;
+    background-color: var(--Light-gray);
+}
+
+.padre{
+    display: grid;
+    gap: 2rem;
+    color: var(--Light-gray);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "usuario1 usuario1 usuario2 usuario3"
+    "usuario4 usuario5 usuario5 usuario3"
+    ;
+}
+
+.testimonio{
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+}
+
+.contenerdor-mayor{
+    display: flex;
+    flex-direction: column;
+}
+
+.contiene{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cara{
+    border-radius: 80%;
+}
+
+.datos{
+    margin-left: 1.5rem;
+    color: var(--White);
+}
+
+.nombre3{
+    color: var(--Very-dark-blackish-blue);
+}
+
+.nombre4{
+    color: var(--Very-dark-blackish-blue);
+}
+
+.name{
+    margin-bottom: 2px;
+}
+ 
+.verified{
+    color: var(--Light-gray);
+    margin-top: 2px;
+}
+
+.titulo{
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--White);
+    letter-spacing: 1.8px;
+}
+
+.ti{
+    color: var(--Very-dark-blackish-blue);
+}
+
+.negrita{
+    color: var(--Very-dark-blackish-blue);
+}
+
+.parrafo3{
+    line-height: 2rem;
+}
+
+.usuario1{
+    grid-area: usuario1;
+    background-color: var(--Moderate-violet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 5rem;
+}
+
+.usuario2{
+    grid-area: usuario2;
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.usuario3{
+    grid-area: usuario3;
+    background-color: var(--White);
+}
+
+.usuario4{
+    grid-area: usuario4;
+    background-color: var(--White);
+}
+
+.usuario5{
+    grid-area: usuario5;
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+@media screen and (max-width: 600px){
+    .padre{
+        margin: 2rem 0;
+        gap: 2rem;
+        color: var(--Light-gray);
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(5,auto);
+        grid-template-areas: 
+        "usuario1"
+        "usuario2"
+        "usuario3"
+        "usuario4"
+        "usuario5"
+        
+        ;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px){
+    .padre{
+        margin: 2rem 0;
+        gap: 2rem;
+        color: var(--Light-gray);
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas: 
+        "usuario1 usuario2"
+        "usuario3 usuario4"
+        "usuario5 usuario5"
+        ;
+    }
+}
